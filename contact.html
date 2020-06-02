@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Piano's</title>
+		<link rel="stylesheet" href="./styles/main.css" />
+		<link rel="stylesheet" href="./styles/contact.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__content">
+				<a class="logo" href="index.html">
+					<h1 class="logo__text">London<span>Piano</span></h1>
+				</a>
+
+				<nav class="navigation">
+					<ul class="navigation__list">
+						<li class="navigation__element">
+							<a class="navigation__link navigation__link" href="index.html">Home</a>
+						</li>
+						<li class="navigation__element">
+							<a class="navigation__link" href="gallery.html">Gallery</a>
+						</li>
+						<li class="navigation__element">
+							<a class="navigation__link" href="about.html">About Us</a>
+						</li>
+						<li class="navigation__element">
+							<a class="navigation__link navigation__link--current" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="banner">
+			<img
+				class="banner__image"
+				srcset="
+					./images/webp/Yamaha-400w.webp   400w,
+					./images/webp/Yamaha-1000w.webp 1000w,
+					./images/webp/Yamaha-3000w.webp 3000w
+				"
+				src="./images/webp/Yamaha.jpg"
+				alt="Piano_yamaha"
+			/>
+			<p class="banner__text">20% DISCOUNT FOR ALL PIANO</p>
+		</div>
+
+		<main>
+			<div class="informations">
+				<h2 class="informations__title">Send message</h2>
+
+				<div class="informations__content">
+					<div class="contact-content">
+						<img
+							class="contact-image"
+							srcset="
+								./images/contact_webp/girl_smiling_400w.webp   400w,
+								./images/contact_webp/girl_smiling_1000w.webp 1000w,
+								./images/contact_webp/girl_smiling_2000w.webp 2000w,
+								./images/contact_webp/girl_smiling_3000w.webp 3000w
+							"
+							sizes="100vw"
+							src="./images/contact_webp/girl_smiling.jpg"
+							alt="Smiling girl with brown eyes and hair. In background bright window."
+						/>
+						<form class="contact-form">
+							<label for="mail" class="contact-label">E-Mail</label>
+							<input type="email" name="mail" id="mail" class="contact-mail" required />
+							<label for="message" class="contact-label">Message</label>
+							<textarea
+								name="message"
+								id="message"
+								maxlength="600"
+								rows="13"
+								required
+								class="contact-message"
+							></textarea>
+
+							<input type="submit" value="Send" class="contact-submit" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="footer">
+			<p class="footer__text">
+				<span class="material-icons">copyright</span>
+				Mieczysław Palian 2020
+			</p>
+		</footer>
+	</body>
+</html>

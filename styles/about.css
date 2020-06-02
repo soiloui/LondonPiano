@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #090909;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+[data-src] {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Arial, sans-serif;
+}
+
+h2 {
+  color: #373f51;
+}
+
+h3 {
+  color: #0075f2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #090909;
+}
+
+img {
+  width: 100%;
+}
+
+.about-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.about-slide--contact {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 4em;
+}
+
+.about-slide .contact-button {
+  border: 3px solid #0075f2;
+  background: transparent;
+  padding: 1em;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px #373f51;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.about-slide .contact-button:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.about-slide__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  -webkit-filter: brightness(80%) contrast(90%);
+          filter: brightness(80%) contrast(90%);
+}
+
+.about-slide__image--moved-up {
+  -o-object-position: 0 80%;
+     object-position: 0 80%;
+}
+
+.about-slide__image--contact {
+  -webkit-filter: brightness(20%) contrast(80%);
+          filter: brightness(20%) contrast(80%);
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+
+.about-slide__text {
+  margin: 0.8em;
+  padding: 0.8em;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  text-shadow: 2px 2px 2px #373f51;
+}
+
+.about-slide__text--contact {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.about-slide__image--filtered {
+  -webkit-filter: brightness(85%) contrast(85%);
+          filter: brightness(85%) contrast(85%);
+}
+
+.fade-in {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: opacity 0.7s ease-out 0.1s, -webkit-transform 0.7s ease-out;
+  transition: opacity 0.7s ease-out 0.1s, -webkit-transform 0.7s ease-out;
+  transition: opacity 0.7s ease-out 0.1s, transform 0.7s ease-out;
+  transition: opacity 0.7s ease-out 0.1s, transform 0.7s ease-out, -webkit-transform 0.7s ease-out;
+}
+
+@media (min-width: 800px) {
+  .about-slide__text {
+    font-size: 3rem;
+    width: 50%;
+    position: absolute;
+    text-align: left;
+  }
+  .about-slide__text--contact {
+    position: relative;
+    text-align: right;
+    width: 80%;
+  }
+  .about-slide--contact {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .about-slide__image--moved-right {
+    -o-object-position: 0 0;
+       object-position: 0 0;
+  }
+  .about-slide__image--moved-left {
+    -o-object-position: 100% 0;
+       object-position: 100% 0;
+  }
+  .about-slide__text--bottom-left {
+    left: 0;
+    bottom: 0;
+  }
+  .about-slide__text--bottom-right {
+    right: 0;
+    bottom: 0;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1300px) {
+  .about-slide__text {
+    font-size: 4rem;
+  }
+}

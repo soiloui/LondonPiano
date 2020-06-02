@@ -1,0 +1,105 @@
+@media (min-width: 0px) {
+	.information {
+		&:not(:last-child) {
+			border-bottom: 1px solid $third-color;
+		}
+	}
+	.opinion-avatar {
+		width: 100px;
+		height: 100px;
+		box-shadow: 1px 1px 3px black;
+	}
+}
+
+@media (min-width: 300px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 800px) {
+	.navigation__list {
+		flex-direction: column;
+	}
+	.model {
+		//LINES SEPARATING EACH MODEL
+		&:not(:last-child)::after {
+			content: '';
+			height: 1px;
+			width: 100%;
+			background: $third-color;
+			place-self: center;
+			margin-top: 1em;
+		}
+	}
+}
+
+@media (min-width: 800px) {
+	html {
+		font-size: 16px;
+	}
+	.header {
+		&__content {
+			justify-content: space-between;
+			flex-direction: row;
+		}
+		.navigation {
+			&__list {
+				flex-direction: row;
+
+				//MAKES NAVIGATION LAST ELEMENT FITTING IN LAYOUT
+				& > :last-child > :last-child {
+					padding: 0.4em 0 0.4em 0.4em;
+				}
+			}
+			&__link {
+				margin-left: 1em;
+			}
+		}
+	}
+	.information {
+		width: 47%;
+		border-bottom: 1px solid $third-color;
+	}
+	.model {
+		width: 47%;
+		.image-container {
+			height: 400px;
+		}
+	}
+	.opinion-avatar {
+		width: 180px;
+		height: 180px;
+		box-shadow: 2px 2px 5px black;
+	}
+}
+
+@media (min-width: 1600px) {
+	html {
+		font-size: 19px;
+	}
+	.information {
+		width: 30%;
+	}
+	.model {
+		width: 30%;
+		.image-container {
+			height: 400px;
+		}
+	}
+}
+
+@media (min-width: 2600px) {
+	html {
+		font-size: 22px;
+	}
+	.information {
+		width: 21%;
+	}
+	.model {
+		width: 21%;
+		.image-container {
+			height: 500px;
+		}
+	}
+}

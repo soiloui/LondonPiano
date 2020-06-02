@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #090909;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+[data-src] {
+  min-width: 50px;
+  min-height: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Arial, sans-serif;
+}
+
+h2 {
+  color: #373f51;
+}
+
+h3 {
+  color: #0075f2;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #090909;
+}
+
+img {
+  width: 100%;
+}
+
+.contact-content {
+  padding: 7em 1em;
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  -webkit-filter: brightness(20%) contrast(90%);
+          filter: brightness(20%) contrast(90%);
+}
+
+.contact-form {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-label {
+  color: white;
+  margin-top: 1em;
+}
+
+.contact-mail {
+  height: 25px;
+}
+
+.contact-submit {
+  margin-top: 1.5em;
+  padding: 0.5em;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  max-width: 50%;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid #0075f2;
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 2px #373f51;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.contact-submit:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,53 @@
+@import 'config';
+
+.contact-content {
+	padding: 7em 1em;
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.contact-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+	filter: brightness(20%) contrast(90%);
+}
+
+.contact-form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-label {
+	color: white;
+	margin-top: 1em;
+}
+
+.contact-mail {
+	height: 25px;
+}
+
+.contact-submit {
+	margin-top: 1.5em;
+	padding: 0.5em;
+	min-width: fit-content;
+	max-width: 50%;
+	cursor: pointer;
+	background: transparent;
+	border: 2px solid $third-color;
+	color: white;
+	font-size: 1.3rem;
+	text-shadow: 2px 2px 2px $secondary-color;
+	transition: all 0.2s ease;
+}
+
+.contact-submit:hover {
+	background: rgba(white, 0.2);
+}

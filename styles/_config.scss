@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
+$primary-color: #090909;
+$secondary-color: #373f51;
+$third-color: #0075f2;
+$primary-font: 'Montserrat', Arial, sans-serif;
+$secondary-font: 'Lato', Arial, sans-serif;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: $primary-color;
+	font-family: $primary-font;
+}
+[data-src] {
+	min-width: 50px;
+	min-height: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $secondary-font;
+}
+h2 {
+	color: $secondary-color;
+}
+h3 {
+	color: $third-color;
+}
+
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: $primary-color;
+}
+img {
+	width: 100%;
+}
