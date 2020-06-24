@@ -204,6 +204,8 @@ main {
   text-transform: uppercase;
   color: white;
   background-color: #0075f2;
+  border-top: 4px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.6);
 }
 
 .informations__content {
@@ -219,9 +221,23 @@ main {
 }
 
 .informations .information {
-  padding: 1em 0;
+  padding: 1em;
+  margin-bottom: 1em;
   font-size: 1rem;
   text-align: justify;
+  background: rgba(0, 117, 242, 0.15);
+}
+
+.informations .information:not(:last-child) {
+  border-bottom: 1px solid #0075f2;
+}
+
+.informations .information--contrast {
+  background: rgba(0, 117, 242, 0.75);
+}
+
+.informations .information--contrast p {
+  color: #fff;
 }
 
 .footer {
@@ -289,11 +305,16 @@ main {
 }
 
 .image-container:hover::before {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .image-container:hover .image-container__hover-text {
   opacity: 1;
+}
+
+.image-container:hover .image-container__image {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .image-container::before {
@@ -303,6 +324,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -313,9 +335,14 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .image-container__hover-text {
+  z-index: 5;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -378,10 +405,11 @@ main {
   font-weight: 700;
 }
 
+.information--contrast .opinion-name {
+  color: #fff;
+}
+
 @media (min-width: 0px) {
-  .information:not(:last-child) {
-    border-bottom: 1px solid #0075f2;
-  }
   .opinion-avatar {
     width: 100px;
     height: 100px;

@@ -1,9 +1,4 @@
 @media (min-width: 0px) {
-	.information {
-		&:not(:last-child) {
-			border-bottom: 1px solid $third-color;
-		}
-	}
 	.opinion-avatar {
 		width: 100px;
 		height: 100px;
