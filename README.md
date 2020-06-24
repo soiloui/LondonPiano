@@ -25,5 +25,6 @@ Multipage prezentacyjny dla firmy zajmującej się sprzedażą pianin
 ## Linki:
 
 - [Github](https://github.com/soiloui/LondonPiano)
-- [Strona](https://soiloui.github.io/LondonPiano/)
+- [Strona na GitHub Pages](https://soiloui.github.io/LondonPiano/)
+- [Strona na zewnętrznym serwerze](https://london-piano.000webhostapp.com/)
 - [Figma](https://www.figma.com/file/0pCqeydwf0X1oM0Da97pRU/Untitled?node-id=0%3A1)
