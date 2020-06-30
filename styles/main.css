@@ -178,10 +178,21 @@ html {
 }
 
 main {
-  padding-bottom: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .informations {
+  padding-bottom: 1em;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,20 +207,17 @@ main {
 
 .informations__title {
   margin: 1em 0;
-  width: 80%;
   text-align: center;
-  font-size: 1.5rem;
-  padding: 0.5em;
+  font-size: 1.6rem;
+  padding: 0.4em;
   font-weight: normal;
-  text-transform: uppercase;
-  color: white;
-  background-color: #0075f2;
-  border-top: 4px solid rgba(255, 255, 255, 0.6);
-  border-bottom: 4px solid rgba(255, 255, 255, 0.6);
+  text-transform: capitalize;
+  color: #0075f2;
+  border-bottom: 2px solid #0075f2;
 }
 
 .informations__content {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,24 +228,16 @@ main {
       flex-wrap: wrap;
 }
 
-.informations .information {
+.information {
+  width: 100%;
   padding: 1em;
   margin-bottom: 1em;
   font-size: 1rem;
   text-align: justify;
-  background: rgba(0, 117, 242, 0.15);
-}
-
-.informations .information:not(:last-child) {
-  border-bottom: 1px solid #0075f2;
-}
-
-.informations .information--contrast {
-  background: rgba(0, 117, 242, 0.75);
-}
-
-.informations .information--contrast p {
-  color: #fff;
+  background: rgba(210, 210, 239, 0.5);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 6px 8px -5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 8px -5px rgba(0, 0, 0, 0.3);
 }
 
 .footer {
@@ -299,9 +299,12 @@ main {
 
 .image-container {
   width: 100%;
-  height: 200px;
+  height: 300px;
   position: relative;
   overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 8px -4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 8px -4px rgba(0, 0, 0, 0.3);
 }
 
 .image-container:hover::before {
@@ -333,12 +336,13 @@ main {
 
 .image-container__image {
   height: 100%;
+  max-width: 80vw;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .image-container__hover-text {
@@ -384,6 +388,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .opinion-avatar {
@@ -405,16 +410,12 @@ main {
   font-weight: 700;
 }
 
-.information--contrast .opinion-name {
-  color: #fff;
-}
-
 @media (min-width: 0px) {
   .opinion-avatar {
     width: 100px;
     height: 100px;
-    -webkit-box-shadow: 1px 1px 3px black;
-            box-shadow: 1px 1px 3px black;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -467,11 +468,11 @@ main {
     margin-left: 1em;
   }
   .information {
-    width: 47%;
-    border-bottom: 1px solid #0075f2;
+    width: 48%;
+    margin-bottom: 2em;
   }
   .model {
-    width: 47%;
+    width: 48%;
   }
   .model .image-container {
     height: 400px;
@@ -479,8 +480,6 @@ main {
   .opinion-avatar {
     width: 180px;
     height: 180px;
-    -webkit-box-shadow: 2px 2px 5px black;
-            box-shadow: 2px 2px 5px black;
   }
 }
 
@@ -488,11 +487,14 @@ main {
   html {
     font-size: 19px;
   }
+  .delete {
+    display: none;
+  }
   .information {
-    width: 30%;
+    width: 31%;
   }
   .model {
-    width: 30%;
+    width: 31%;
   }
   .model .image-container {
     height: 400px;
@@ -503,11 +505,16 @@ main {
   html {
     font-size: 22px;
   }
+  .delete {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .information {
-    width: 21%;
+    width: 23%;
   }
   .model {
-    width: 21%;
+    width: 23%;
   }
   .model .image-container {
     height: 500px;

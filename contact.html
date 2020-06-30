@@ -66,7 +66,7 @@
 							src="./images/contact_webp/girl_smiling.jpg"
 							alt="Smiling girl with brown eyes and hair. In background bright window."
 						/>
-						<form class="contact-form">
+						<form action="./scripts/mail.php" method="POST" class="contact-form">
 							<label for="mail" class="contact-label">E-Mail</label>
 							<input type="email" name="mail" id="mail" class="contact-mail" required />
 							<label for="message" class="contact-label">Message</label>
@@ -79,7 +79,7 @@
 								class="contact-message"
 							></textarea>
 
-							<input type="submit" value="Send" class="contact-submit" />
+							<button type="submit" name="submit" class="contact-submit">Send</button>
 						</form>
 					</div>
 				</div>

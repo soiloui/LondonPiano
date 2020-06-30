@@ -50,8 +50,6 @@ img {
   background: rgba(55, 63, 81, 0.1);
   margin-bottom: 1em;
   border-radius: 10px;
-  -webkit-box-shadow: 2px 1px 1px #0075f2;
-          box-shadow: 2px 1px 1px #0075f2;
 }
 
 .rotation-board__text {
@@ -67,8 +65,8 @@ img {
   height: 100%;
   background: #0075f2;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.45s ease-out;
+  transition: all 0.45s ease-out;
   border-radius: 10px;
 }
 
